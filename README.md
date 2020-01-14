@@ -1,1 +1,1 @@
-# phpdocker
+# PHP Docker example
