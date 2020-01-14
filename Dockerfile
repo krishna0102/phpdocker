@@ -20,6 +20,8 @@ RUN apt-get install -y --no-install-recommends \
     libjpeg62-turbo-dev \
     librabbitmq-dev \
     libzip-dev \
+    libonig-dev \
+    libxpm-dev \    
     curl \
     git \
     subversion \
@@ -43,11 +45,6 @@ RUN docker-php-ext-configure bcmath --enable-bcmath \
     soap \
     sockets \
     zip \
-  && docker-php-ext-configure gd \
-    --enable-gd-native-ttf \
-    --with-jpeg-dir=/usr/lib \
-    --with-freetype-dir=/usr/include/freetype2 \
-  && docker-php-ext-install gd \
   && docker-php-ext-install opcache \
   && docker-php-ext-enable opcache \
   && pecl install amqp \
