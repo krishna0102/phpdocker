@@ -1,7 +1,10 @@
 FROM php:fpm
-RUN apt-get update \
-    apt-get upgrade -y \
-    && apt-get install -y --no-install-recommends \
+RUN apt-get update
+RUN apt-get upgrade -y
+RUN apt-get install -y --fix-missing \
+    apt-utils \
+    gnupg
+RUN apt-get install -y --no-install-recommends \
     iputils-ping \
     libicu-dev \
     libmemcached-dev \
