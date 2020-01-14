@@ -30,7 +30,6 @@ RUN apt-get install -y --no-install-recommends \
 RUN docker-php-ext-configure bcmath --enable-bcmath \
   && docker-php-ext-configure pcntl --enable-pcntl \
   && docker-php-ext-configure pdo_mysql --with-pdo-mysql \
-  && docker-php-ext-configure pdo_pgsql --with-pgsql \
   && docker-php-ext-configure mbstring --enable-mbstring \
   && docker-php-ext-configure soap --enable-soap \
   && docker-php-ext-install \
