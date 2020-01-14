@@ -21,7 +21,7 @@ RUN apt-get update \
     git \
     subversion \
     unzip \
-  && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/*
 
 # Install various PHP extensions
 RUN docker-php-ext-configure bcmath --enable-bcmath \

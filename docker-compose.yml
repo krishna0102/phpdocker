@@ -1,6 +1,6 @@
 version: '3'
 
 services:                    
-    php:        
+    php-fpm:        
         build: . 
         container_name: php-fpm
