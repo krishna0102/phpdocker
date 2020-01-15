@@ -84,3 +84,9 @@ RUN chown -R www-data:www-data /var/www/ \
 RUN rm -rf /var/lib/apt/lists/*
 
 VOLUME $COMPOSER_HOME
+
+RUN chown -R www-data:www-data /var/www/html
+
+# Expose and start PHP-FPM
+EXPOSE 9000
+CMD ["php-fpm"]
